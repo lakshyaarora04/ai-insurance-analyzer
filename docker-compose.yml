@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  webhook-server:
+    build: .
+    container_name: llm-webhook-server
+    ports:
+      - "8001:8001"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8001
+      - DEBUG=False
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Add Redis for caching (uncomment if needed)
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: llm-redis
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data
+  #   restart: unless-stopped
+
+  # Optional: Add PostgreSQL for data persistence (uncomment if needed)
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: llm-postgres
+  #   environment:
+  #     POSTGRES_DB: llm_webhook
+  #     POSTGRES_USER: webhook_user
+  #     POSTGRES_PASSWORD: webhook_password
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   restart: unless-stopped
+
+volumes:
+  # redis_data:
+  # postgres_data:

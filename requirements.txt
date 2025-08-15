@@ -1,0 +1,11 @@
+openai
+langchain
+faiss-cpu
+sentence-transformers
+pdfplumber
+python-docx
+streamlit
+fastapi
+uvicorn
+pydantic
+python-dotenv
