@@ -516,9 +516,6 @@ export DEBUG=True
 python webhook_server.py
 ```
 
-## 📄 **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 **Acknowledgments**
 
@@ -529,9 +526,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 **Support**
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/llm-doc-query-system/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/llm-doc-query-system/discussions)
-- **Email**: your.email@example.com
+- **Email**: arora.lakshya04@gmail.com
 
 ---
 
@@ -544,3 +539,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [![GitHub issues](https://img.shields.io/github/issues/yourusername/llm-doc-query-system)](https://github.com/yourusername/llm-doc-query-system/issues)
 
 </div>
+
